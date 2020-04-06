@@ -1,0 +1,10 @@
+// ==UserScript==
+// @name Google Meet - Send Dial In
+// @namespace    https://github.com/bartlangelaan/google-meet-send-dial-in
+// @version 0.0.0-dev
+// @description Makes it quite easy to send a dial-in link from Google Meet to yourself.
+// @author Bart Langelaan
+// @include https://meet.google.com/*
+// @run-at document-idle
+// @license MIT
+// ==/UserScript==

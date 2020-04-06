@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "google-meet-send-dial-in",
+  "version": "0.0.0-dev",
+  "description": "Makes it quite easy to send a dial-in link from Google Meet to yourself.",
+  "scripts": {
+    "start": "npm run build:clear && run-p -l start:*",
+    "start:userscript": "parcel watch src/index.user.js",
+    "start:share-result": "parcel src/share-result/index.html -d dist/share-result",
+    "build": "run-s build:*",
+    "build:clear": "rm -rf dist",
+    "build:userscript": "parcel build src/index.user.js --no-source-maps --public-url /google-meet-send-dial-in",
+    "build:userscript-version": "node ./replace-version.js",
+    "build:share-result": "parcel build src/share-result/index.html -d dist/share-result --public-url /google-meet-send-dial-in/share-result"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartlangelaan/google-meet-send-dial-in.git"
+  },
+  "author": "Bart Langelaan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartlangelaan/google-meet-send-dial-in/issues"
+  },
+  "homepage": "https://github.com/bartlangelaan/google-meet-send-dial-in#readme",
+  "dependencies": {
+    "qs": "^6.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^1.12.4",
+    "parcel-plugin-greasemonkey": "^1.0.3"
+  }
+}

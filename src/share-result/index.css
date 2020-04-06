@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body.error {
+  background-color: lightyellow;
+}
+
+#dial-button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 6vmin;
+  padding: 4vmin;
+  border-radius: 2vmin;
+  display: inline-block;
+  border: none;
+  animation: dial-button-animation 1s infinite;
+}
+
+@keyframes dial-button-animation {
+  0%, 100% {
+    transform: scale(1);
+    background: #56a89d;
+    box-shadow: .1vmin .1vmin 1vmin black;
+  }
+  50% {
+    transform: scale(1.1);
+    background: #00887a;
+    box-shadow: .5vmin .5vmin 1vmin black;
+  }
+}
+
+body.error #dial-button {
+  display: none;
+}
+
+#error-message {
+  display: none;
+
+  font-size: 6vmin;
+  line-height: 20vmin;
+}
+body.error #error-message {
+  display: block;
+}
