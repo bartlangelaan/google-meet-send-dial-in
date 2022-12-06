@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/bartlangelaan/google-meet-send-dial-in#readme",
   "dependencies": {
-    "qs": "^6.9.3"
+    "qs": "^6.9.7"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
